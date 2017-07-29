@@ -32,9 +32,36 @@
         </section>
 
         <section id="section-2" class="animated slideInRight bg-faded p-5 my-3">
-            <h1>Section Two</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt dignissimos ab perspiciatis exercitationem porro doloribus possimus quos id commodi optio sit aspernatur vel maxime, fuga reiciendis. Consequuntur, odit, quaerat. Ipsam ducimus et blanditiis ex, sed dicta voluptatum impedit vero.</p>
+            <h1 id="anim-head">Section Two</h1>
+            <p id="anim-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt dignissimos ab perspiciatis exercitationem porro doloribus possimus quos id commodi optio sit aspernatur vel maxime, fuga reiciendis. Consequuntur, odit, quaerat. Ipsam ducimus et blanditiis ex, sed dicta voluptatum impedit vero.</p>
+            <button id="animate-btn" class="btn btn-primary">Animate</button>
+            <button id="animate-btn2" class="btn btn-primary">Header Out</button>
         </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#animate-btn').click(function(){
+                animate('#anim-head', 'bounce');
+                animate('#anim-body', 'rubberBand');
+                return false
+            })
+
+            $('#animate-btn2').click(function(){
+                animate('header', 'slideOutUp');
+                setTimeout(function(){
+                    $('header').css('visibility', 'hidden');
+                }, 1000);
+                return false
+            })
+            //animate
+            function animate(element, animation){
+                $(element).addClass('animated '+ animation);
+                var wait = setTimeout(function(){
+                    $(element).removeClass('animated '+ animation);
+                }, 1000);
+            }
+        })
+    </script>
 </body>
 </html>
