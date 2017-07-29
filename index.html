@@ -7,19 +7,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <title>Animate CSS Sandbox</title>
+    <style>
+        #section-1{
+            animation-delay:1s;
+            /*animation-duration:2s;
+            animation iteration:infinite*/
+        }
+
+        #section-2{
+            animation-delay:2s;
+            /*animation-duration:2s;*/
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header class="text-center bg-primary text-white p-5">
+        <header class="animated slideInDown text-center bg-primary text-white p-5">
             <h1 class="display-4">Animate CSS Sandbox</h1>
         </header>
 
-        <section id="section-1" class="bg-faded p-5 my-3">
+        <section id="section-1" class="animated slideInLeft bg-faded p-5 my-3">
             <h1>Section One</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt dignissimos ab perspiciatis exercitationem porro doloribus possimus quos id commodi optio sit aspernatur vel maxime, fuga reiciendis. Consequuntur, odit, quaerat. Ipsam ducimus et blanditiis ex, sed dicta voluptatum impedit vero.</p>
         </section>
 
-        <section id="section-2" class="bg-faded p-5 my-3">
+        <section id="section-2" class="animated slideInRight bg-faded p-5 my-3">
             <h1>Section Two</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt dignissimos ab perspiciatis exercitationem porro doloribus possimus quos id commodi optio sit aspernatur vel maxime, fuga reiciendis. Consequuntur, odit, quaerat. Ipsam ducimus et blanditiis ex, sed dicta voluptatum impedit vero.</p>
         </section>
